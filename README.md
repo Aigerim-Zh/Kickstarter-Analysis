@@ -8,7 +8,7 @@
 ## Overview of Project
 
 ### Purpose
-The purpose of this project is to perform data analysis on several thousand crowdfunding projects to uncover any hidden trends. Specifically, we want to find what are the factors that might explain why some campaigns are successful and some are not. 
+The purpose of this project is to perform data analysis on several thousand crowdfunding projects to uncover any hidden trends. Specifically, we want to find what types of Kickstarter platform campaigns are the most successful and why. 
 
 ### Dataset
 
@@ -17,7 +17,7 @@ The data consists of 4114 different Kickstarter campaigns for 21 countries, laun
 
 ## Analysis and Challenges
 
-### Preparing the Data 
+### [Preparing the Data](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/Kickstarter_Challenge.xlsx)
 The "Formatted Data" sheet shows the original data with the following adjustments:
 
 1. The first 3 columns and 1st row have been frozen for a better navigation. 
@@ -52,7 +52,7 @@ The "Formatted Data" sheet shows the original data with the following adjustment
     
     _Average Donation_
 
-      Kickstarter crowdfunding platform provides incentives for different pledge amounts. If you are intersted in setting up any incentives when launching a campaign, it is useful to know how much people have pledged historically. 
+      Kickstarter crowdfunding platform provides incentives for different pledge amounts. If you are intersted in setting up any incentives when launching a campaign, it might useful to know how much people have pledged historically. 
 
       - Column E (pledged) shows how much was donated. 
       - Column L (backers_count) shows the count of backers of the campaign. 
@@ -76,9 +76,9 @@ The "Formatted Data" sheet shows the original data with the following adjustment
         * Technology
         * Theater
 
-     * There are many subcategories subcategories for each category type, illustrated in Column T (subcategory). 
+     * There are many subcategories for each category type, illustrated in Column T (subcategory). 
 
-### What Kickstarter campaigns are the most successful?
+### What Kickstarter Campaigns are the Most Cuccessful?
 
 The "Category Statistics" sheet contains analysis displaying outcomes for each fundraising category, which can be filtered by a country. The chart below shows that, **the theater category was the most successful** with 839 Kickstarter campaigns among all 21 countries.  
 
@@ -108,9 +108,9 @@ Again, the numbers are mostly driven by the United States, which had 912 total t
 
 We saw that among all Kickstarter campaigns in our data, the theater category had the most successful outcomes. It would be beneficial to find out in which months it is best to launch a theater campaign. 
 
-The sheet "Theater Outcomes by Launch Date" analyzes the outcomes for the theater campaigns by month. 
+**The "Theater Outcomes by Launch Date" sheet** analyzes the outcomes for the theater campaigns by month. 
 
-The data below, more or less, exhibits an overall trend. There is a general increase in the number of successful theater campaigns between March and May, where May has the highest number of successful campaigns. After May, there is a general decrease in successful outcomes, reaching the lowest number in December. The number of canceled campaigns stays roughly stable throughout the year with overall low counts. 
+The data below, more or less, exhibits an overall trend. There is a general increase in the number of successful theater campaigns between March and May, where May has the highest number of successful campaigns. After May, there is a general decrease in successful outcomes, reaching the lowest number in December. The number of canceled campaigns stays roughly stable throughout the year with overall low counts, with the maximum of 7 campaigns in January and the minimum of 1 in July. 
 
 ![](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/resources/Theater_Outcomes_vs_Launch.png)
 
@@ -120,9 +120,9 @@ _Please note that the analysis excludes "live" outcome campaigns as there is a v
 
 How much a campaign is asking for might also factor in its outcome. We saw that among theater campaigns, the "plays" subcategory was the most successful. 
 
-The "_Outcomes Based on Goals_Plays" sheet demonstrates analysis of outcomes for plays based on goal amount ranges. 
+**The "Outcomes Based on Goals_Plays" sheet** demonstrates analysis of outcomes for plays based on goal amount ranges. 
 
-The analysis illustrates that the highest percentage of successful plays of 76% had the fundraising goals of less than $1000. Overall, with higher goal ranges, there is a general decrease in the successful outcomes and a general increase in the failed outcomes. However, there is an unsual reverse trend observed in the goal ranges between $30,000 to $44,999, where the success rates spiked and failed outcomes slumped. 
+The chart below illustrates that the highest percentage of successful plays of 76% had the fundraising goals of less than $1000. Overall, with higher goal ranges, there is a general decrease in the successful outcomes and a general increase in the failed outcomes. However, there is an unsual reverse trend observed in the goal ranges between $30,000 to $44,999, where the success rates spiked and failed outcomes slumped. 
 
 ![](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/resources/Outcomes_vs_Goals_Plays.png)
 
@@ -131,17 +131,16 @@ _Please note that the analysis excludes "live" outcome campaigns as there is a v
 
 ### Challenges and Difficulties Encountered
 
-* The dataset came with non-readible date columns. The conversion is explained above. 
+* The dataset came with non-readible date columns. The conversion is explained [above](https://github.com/Aigerim-Zh/kickstarter-analysis#preparing-the-data). 
 * There are many positive outliers in the data, which need to be reviewed. It is possible that, because of these outliers, the trend linesare slightly distorted. 
 * It is assumed that the monetary columns such as goal and pledged amounts are standartized to one currency and adjusted for inflation. However, it is not clear from the dataset. 
 
 ## Results
 
 ### **Conclusions about the Outcomes based on Launch Date**
-  * Theater category is the most successful campaign type. 
+  * Theater category showed the highest number of successful outcomes.
   * Based on the preliminary analysis, May is the best month to launch a theater campaign as it showed the highest number of successful outcomes historically. 
-  * The number of canceled theater campaigns stays roughly stable throughout the year with overall low counts, with the maximum of 7 campaigns in January and the minimum of 1 in July. 
-
+  * The number of canceled theater campaigns stays roughly stable throughout the year with overall low counts. 
 
 ### **Conclusions about Outcomes based on Fundrasing Goals of Theater Plays**
   * Plays were the most successful subcategory of the theater category campaigns. 
@@ -150,14 +149,14 @@ _Please note that the analysis excludes "live" outcome campaigns as there is a v
 
 Please note that these conclusions are preliminary and do not imply any causal inference. 
 
-### **Limitations of this dataset** 
+### **Limitations of the Dataset** 
 
 * There is not enough data for "live" category campaigns, which had to be exlcuded for some parts of the analyses. 
 * In general, there is low variability in the data since most of the campaigns are from the United States. So, the analysis would not be fully representative of other countries.
 
 ## Additional Analyses
 Please find some additional analysis performed on the data [here](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/Additional_Analysis.xlsx). 
-### Example inference about individual campaigns
+### Example Inference about Individual Campaigns
 
 The "Formatted Data" sheet can give an overview of individual campaigns. For instance, there is a play called "Foresight." If we search for it in the formatted data, we can see that this was a successful campaign, which was 100% funded, even exceeding $4. Also, the average donation for this play was $117.88, which is quite high, given that there are only 17 backers. Finally, this campaign was active for just under a month. 
 
@@ -165,21 +164,21 @@ Let's look at the following five plays happened at the Edinburgh Festival Fringe
 
 ![](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/resources/Edinburgh%20Plays%20Research.png)
 
-We can see that all of these plays reached their funding goals and were active for over 30 days except for the "Jestia and Raedon" play. 
+We can see that all of these plays reached their funding goals and were active for over 30 days except for the "Jestia and Raedon" play, which was active for 10 and a half days. 
 
-### Analysis of successfull anf failed plays in the US
+### Analysis of Successfull anf Failed Plays in the US
 
 The "Successfull US Plays" and "Failed US Plays" sheets are datasets filtered for successfull and failed theater plays launched in the United States. 
 
 The table below shows a descriptive statistics based on these data. 
-![](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/resources/Success_Failed_Plays_vs_Goal_Pledged_US.png)
+![](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/resources/Outcome_vs_Goal_Pledged_US_stats.png)
 
 * The distributions are similiar in all subsets with the mean around the 75th percentile (or 3rd quartile). 
 * ***The distributions are driven by large values**. In each distribution, the mean is larger than the median (skewed to the right). For successful campaigns, the Standard Deviation is approx. 2 times larger than the Interquartile range (IQR). For failed campaigns, the Standard Deviation is almost 3 times greater than the IQR. 
 * In each distribution, the standard deviation is larger than the mean. Any observation below the mean can considered "close" to the center. 
 * **Failed** plays had **higher fundraising goals**, as per the average and median. At the same time, both the mean and median pledged amounts are significantly lower for the failed plays than than that for the successful ones. If the **median pledged** amounts were more or less the same for both successful and failed campaigns, we could say that the failed ones asked for too much money. However, it is not the case here - there must be other factors in play. 
 
-## Analysis of theater campaigns for musicals in Great Britain
+## Analysis of Theater Campaigns for Musicals in Great Britain
 
 The below chart displays distributions of goal and pledged amounts for "Musicals" subcategory in Great Britain. 
 
