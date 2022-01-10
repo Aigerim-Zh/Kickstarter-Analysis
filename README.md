@@ -84,9 +84,7 @@ The "Category Statistics" sheet contains analysis displaying outcomes for each f
 
 ![](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/resources/Outcomes_vs_Category.png)
 
-**The origin of the campaign has an impact**. 
-
-The table below shows that out of 4114 campaigns, 3038 were only from the United States. Great Britain, for example, with only 604 Kickstarter campaigns had the second highest number after the US.
+**The origin of the campaign has an impact**. The table below shows that out of 4114 campaigns, 3038 were only from the United States. Great Britain, for example, with only 604 Kickstarter campaigns had the second highest number after the US.
 
 ![](https://github.com/Aigerim-Zh/kickstarter-analysis/blob/main/resources/Campaigns_by_Country.png)
 
